@@ -1,11 +1,18 @@
-apply plugin: 'com.android.application'
+//根据isLibrary变量动态的切换 集成/组件模式
+if (isLibrary){
+    apply plugin: 'com.android.library'
+}else{
+    apply plugin: 'com.android.application'
+}
 
 android {
     compileSdkVersion 29
     buildToolsVersion "30.0.2"
 
     defaultConfig {
-        applicationId "com.example.dcomponent"
+        if (!isLibrary){
+            applicationId "com.example.dcomponent"
+        }
         minSdkVersion 17
         targetSdkVersion 29
         versionCode 1
