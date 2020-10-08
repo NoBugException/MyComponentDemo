@@ -17,3 +17,25 @@ include ':business:dcomponent'
 //project(':ccomponent').projectDir = new File(rootDir, 'business/ccomponent')
 //include ':dcomponent'
 //project(':dcomponent').projectDir = new File(rootDir, 'business/dcomponent')
+
+include ':function:functionA'
+include ':function:functionB'
+include ':function:functionC'
+include ':function:functionD'
+
+//include ':functionA'
+//project(':functionA').projectDir = new File(rootDir, 'function/functionA')
+//include ':functionB'
+//project(':functionB').projectDir = new File(rootDir, 'function/functionB')
+//include ':functionC'
+//project(':functionC').projectDir = new File(rootDir, 'function/functionC')
+//include ':functionD'
+//project(':functionD').projectDir = new File(rootDir, 'function/functionD')
+
+include ':base:commonlib'
+include ':base:customlib'
+
+//include ':commonlib'
+//project(':commonlib').projectDir = new File(rootDir, 'function/commonlib')
+//include ':customlib'
+//project(':customlib').projectDir = new File(rootDir, 'function/customlib')
