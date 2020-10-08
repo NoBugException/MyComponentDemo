@@ -1,2 +1,19 @@
 include ':app'
-rootProject.name = "MyComponentDemo"
+include ':business:maincomponent'
+include ':business:acomponent'
+include ':business:bcomponent'
+include ':business:ccomponent'
+include ':business:dcomponent'
+
+//include ':maincomponent'
+//project(':maincomponent').projectDir = new File(rootDir, 'business/maincomponent')
+//include ':acomponent'
+//project(':acomponent').projectDir = new File(rootDir, 'business/acomponent')
+//include ':bcomponent'
+//project(':bcomponent').projectDir = new File(rootDir, 'business/bcomponent')
+//include ':bcomponent'
+//project(':bcomponent').projectDir = new File(rootDir, 'business/bcomponent')
+//include ':ccomponent'
+//project(':ccomponent').projectDir = new File(rootDir, 'business/ccomponent')
+//include ':dcomponent'
+//project(':dcomponent').projectDir = new File(rootDir, 'business/dcomponent')
