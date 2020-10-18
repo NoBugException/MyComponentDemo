@@ -31,9 +31,9 @@ android {
 
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
-    implementation rootProject.dependencies["appcompat"]
-    implementation rootProject.dependencies["constraintlayout"]
-    testImplementation rootProject.dependencies["junit"]
-    androidTestImplementation rootProject.dependencies["testjunit"]
-    androidTestImplementation rootProject.dependencies["espresso-core"]
+    implementation rootProject.dependencie["appcompat"]
+    implementation rootProject.dependencie["constraintlayout"]
+    testImplementation rootProject.dependencie["junit"]
+    androidTestImplementation rootProject.dependencie["testjunit"]
+    androidTestImplementation rootProject.dependencie["espresso-core"]
 }

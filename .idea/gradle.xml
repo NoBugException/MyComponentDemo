@@ -13,9 +13,6 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
-            <option value="$PROJECT_DIR$/base" />
-            <option value="$PROJECT_DIR$/base/commonlib" />
-            <option value="$PROJECT_DIR$/base/customlib" />
             <option value="$PROJECT_DIR$/business" />
             <option value="$PROJECT_DIR$/business/acomponent" />
             <option value="$PROJECT_DIR$/business/bcomponent" />
@@ -23,6 +20,7 @@
             <option value="$PROJECT_DIR$/business/dcomponent" />
             <option value="$PROJECT_DIR$/business/maincomponent" />
             <option value="$PROJECT_DIR$/function" />
+            <option value="$PROJECT_DIR$/function/common" />
             <option value="$PROJECT_DIR$/function/functionA" />
             <option value="$PROJECT_DIR$/function/functionB" />
             <option value="$PROJECT_DIR$/function/functionC" />

@@ -1,10 +1,25 @@
+// app壳工程
 include ':app'
+
+// 业务组件
 include ':business:maincomponent'
 include ':business:acomponent'
 include ':business:bcomponent'
 include ':business:ccomponent'
 include ':business:dcomponent'
 
+// 功能组件
+include ':function:functionA'
+include ':function:functionB'
+include ':function:functionC'
+include ':function:functionD'
+include ':function:common'
+
+
+//// app壳工程
+//include ':app'
+//
+//// 业务组件
 //include ':maincomponent'
 //project(':maincomponent').projectDir = new File(rootDir, 'business/maincomponent')
 //include ':acomponent'
@@ -17,12 +32,8 @@ include ':business:dcomponent'
 //project(':ccomponent').projectDir = new File(rootDir, 'business/ccomponent')
 //include ':dcomponent'
 //project(':dcomponent').projectDir = new File(rootDir, 'business/dcomponent')
-
-include ':function:functionA'
-include ':function:functionB'
-include ':function:functionC'
-include ':function:functionD'
-
+//
+//// 功能组件
 //include ':functionA'
 //project(':functionA').projectDir = new File(rootDir, 'function/functionA')
 //include ':functionB'
@@ -31,11 +42,5 @@ include ':function:functionD'
 //project(':functionC').projectDir = new File(rootDir, 'function/functionC')
 //include ':functionD'
 //project(':functionD').projectDir = new File(rootDir, 'function/functionD')
-
-include ':base:commonlib'
-include ':base:customlib'
-
-//include ':commonlib'
-//project(':commonlib').projectDir = new File(rootDir, 'function/commonlib')
-//include ':customlib'
-//project(':customlib').projectDir = new File(rootDir, 'function/customlib')
+//include ':common'
+//project(':common').projectDir = new File(rootDir, 'function/common')
