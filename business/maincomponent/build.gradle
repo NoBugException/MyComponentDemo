@@ -9,6 +9,8 @@ android {
     compileSdkVersion rootProject.android.compileSdkVersion
     buildToolsVersion rootProject.android.buildToolsVersion
 
+    resourcePrefix "maincomponent_"
+
     defaultConfig {
         if (!isLibrary){
             applicationId rootProject.appId["maincomponent"]
