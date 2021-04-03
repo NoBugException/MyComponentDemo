@@ -27,6 +27,21 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+    //资源配置
+    sourceSets{
+        main{
+            if(isLibrary){
+                //在组件模式下，使用的manifest文件
+                manifest.srcFile 'src/main/library/AndroidManifest.xml'
+                //在组件模式下，使用的多个java路径
+                java.srcDirs 'src/main/library/java','src/main/java'
+            }else{
+                // 在集成模式下，使用的manifest文件
+                manifest.srcFile 'src/main/AndroidManifest.xml'
+            }
+        }
+    }
 }
 
 dependencies {
