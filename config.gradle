@@ -2,7 +2,7 @@ ext {
 
     // false: 组件模式
     // true ：集成模式
-    isLibrary = true
+    isLibrary = false
 
     /**
      * android版本
@@ -27,21 +27,25 @@ ext {
     ]
 
     /**
-     * 依赖版本管理(版本号可以单独管理，不过，本demo中不使用)
+     * 依赖版本管理
      */
     versions = [
-
+            appcompatVersion         : "1.2.0",
+            constraintlayoutVersion  : "2.0.1",
+            junitVersion             : "4.12",
+            testJunitVersion         : "1.1.2",
+            espressCoreVersion       : "3.3.0"
     ]
 
     /**
      * 依赖管理
      */
     dependencie = [
-            "appcompat"         : "androidx.appcompat:appcompat:1.2.0",
-            "constraintlayout"  : "androidx.constraintlayout:constraintlayout:2.0.1",
-            "junit"             : "junit:junit:4.12",
-            "testjunit"         : "androidx.test.ext:junit:1.1.2",
-            "espresso-core"     : "androidx.test.espresso:espresso-core:3.3.0",
+            "appcompat"         : "androidx.appcompat:appcompat:${versions["appcompatVersion"]}",
+            "constraintlayout"  : "androidx.constraintlayout:constraintlayout:${versions["constraintlayoutVersion"]}",
+            "junit"             : "junit:junit:${versions["junitVersion"]}",
+            "testjunit"         : "androidx.test.ext:junit:${versions["testJunitVersion"]}",
+            "espresso-core"     : "androidx.test.espresso:espresso-core:${versions["espressCoreVersion"]}"
     ]
 
 }
