@@ -1,8 +1,8 @@
 package com.example.ccomponent;
 
-import android.app.Application;
+import com.example.common.BaseApplication;
 
-public class CCustomApplication extends Application {
+public class CCustomApplication extends BaseApplication {
 
     @Override
     public void onCreate() {

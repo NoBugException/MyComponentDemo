@@ -1,8 +1,8 @@
 package com.example.dcomponent;
 
-import android.app.Application;
+import com.example.common.BaseApplication;
 
-public class DCustomApplication extends Application {
+public class DCustomApplication extends BaseApplication {
 
     @Override
     public void onCreate() {

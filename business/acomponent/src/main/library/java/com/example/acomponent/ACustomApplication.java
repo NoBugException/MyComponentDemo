@@ -1,8 +1,8 @@
 package com.example.acomponent;
 
-import android.app.Application;
+import com.example.common.BaseApplication;
 
-public class ACustomApplication extends Application {
+public class ACustomApplication extends BaseApplication {
 
     @Override
     public void onCreate() {

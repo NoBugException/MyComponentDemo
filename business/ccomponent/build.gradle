@@ -34,13 +34,13 @@ android {
     sourceSets{
         main{
             if(isLibrary){
-                //在组件模式下，使用的manifest文件
+                // 在集成模式下，使用的manifest文件
                 manifest.srcFile 'src/main/library/AndroidManifest.xml'
+            }else{
+                //在组件模式下，使用的manifest文件
+                manifest.srcFile 'src/main/AndroidManifest.xml'
                 //在组件模式下，使用的多个java路径
                 java.srcDirs 'src/main/library/java','src/main/java'
-            }else{
-                // 在集成模式下，使用的manifest文件
-                manifest.srcFile 'src/main/AndroidManifest.xml'
             }
         }
     }
@@ -53,4 +53,7 @@ dependencies {
     testImplementation rootProject.dependencie["junit"]
     androidTestImplementation rootProject.dependencie["testjunit"]
     androidTestImplementation rootProject.dependencie["espresso-core"]
+
+    // 依赖公共组件
+    implementation project(path: ':function:common')
 }
