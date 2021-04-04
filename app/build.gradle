@@ -29,4 +29,12 @@ dependencies {
     testImplementation rootProject.dependencie["junit"]
     androidTestImplementation rootProject.dependencie["testjunit"]
     androidTestImplementation rootProject.dependencie["espresso-core"]
+    implementation project(path: ':function:common')
+    if (isLibrary) {
+        implementation project(path: ':business:maincomponent')
+        implementation project(path: ':business:acomponent')
+        implementation project(path: ':business:ccomponent')
+        implementation project(path: ':business:dcomponent')
+        implementation project(path: ':business:bcomponent')
+    }
 }

@@ -2,6 +2,6 @@
     package="com.example.acomponent">
 
     <application android:name="com.example.acomponent.ACustomApplication">
-
+        <activity android:name=".MainActivityFromA"/>
     </application>
 </manifest>

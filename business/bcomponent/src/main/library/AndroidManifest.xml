@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.acomponent">
+    package="com.example.bcomponent">
 
     <application android:name="com.example.bcomponent.BCustomApplication">
-
+        <activity android:name=".MainActivityFromB"/>
     </application>
 </manifest>
