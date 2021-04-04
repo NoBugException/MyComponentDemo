@@ -41,6 +41,28 @@ android {
             // 这里可以添加pad的打包配置
         }
     }
+
+    // app签名
+    signingConfigs {
+        def appStoreFile = System.getenv("STORE_FILE")
+        def appStorePassword = System.getenv("STORE_PASSWORD")
+        def appKeyAlias = System.getenv("KEY_ALIAS")
+        def appKeyPassword = System.getenv("KEY_PASSWORD")
+
+        //当不能从环境变量里获取签名信息的时候，就使用项目中自带的debug签名
+        if(!appStoreFile||!appStorePassword||!appKeyAlias||!appKeyPassword){
+            appStoreFile = "debug.keystore"
+            appStorePassword = "android"
+            appKeyAlias = "androiddebugkey"
+            appKeyPassword = "android"
+        }
+        release {
+            storeFile file(appStoreFile)
+            storePassword appStorePassword
+            keyAlias appKeyAlias
+            keyPassword appKeyPassword
+        }
+    }
 }
 
 android.applicationVariants.all { variant ->
