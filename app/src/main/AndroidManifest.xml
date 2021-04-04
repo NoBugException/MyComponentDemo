@@ -3,6 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.mycomponentdemo">
 
+    <meta-data
+        android:name="com.amap.api.v2.apikey"
+        android:value="${KEY}" />
+
     <application
         android:name=".MyCustomApplication"
         android:allowBackup="true"
