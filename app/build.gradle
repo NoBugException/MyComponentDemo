@@ -17,11 +17,13 @@ android {
 
     buildTypes {
         debug {
+            // 关闭zipalign优化
             zipAlignEnabled = false
         }
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            // 开启zipalign优化
             zipAlignEnabled = true
         }
     }
