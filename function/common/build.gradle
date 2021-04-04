@@ -28,5 +28,5 @@ dependencies {
     testImplementation rootProject.dependencie["junit"]
     androidTestImplementation rootProject.dependencie["testjunit"]
     androidTestImplementation rootProject.dependencie["espresso-core"]
-
+    implementation 'androidx.multidex:multidex:2.0.1'
 }

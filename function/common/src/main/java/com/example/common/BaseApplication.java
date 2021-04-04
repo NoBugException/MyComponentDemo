@@ -2,17 +2,20 @@ package com.example.common;
 
 import android.app.Application;
 
-    public class BaseApplication extends Application {
+import androidx.multidex.MultiDex;
 
-        private static BaseApplication application;
+public class BaseApplication extends Application {
 
-        @Override
-        public void onCreate() {
-            super.onCreate();
-            application = this;
-        }
+    private static BaseApplication application;
 
-        public static BaseApplication getApplication(){
-            return application;
-        }
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        application = this;
+        MultiDex.install(this);
     }
+
+    public static BaseApplication getApplication(){
+        return application;
+    }
+}

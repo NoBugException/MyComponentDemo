@@ -13,6 +13,9 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         // 必须要保证所有的flavor都属于同一个维度
         flavorDimensions "default"
+
+        // 启用multiDex
+        multiDexEnabled true
     }
 
     buildTypes {
