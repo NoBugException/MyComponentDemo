@@ -65,6 +65,14 @@ android {
             keyPassword appKeyPassword
         }
     }
+
+    dexOptions {
+        incremental true // 是否启动dx的增量模式，默认为false。增量模式速度更快，但目前有很多限制，慎用
+        javaMaxHeapSize '4g' // 执行dx命令时，分配的最大堆内存，主要是为了解决执行dx内存不够的问题
+        jumboMode true // 是否开启jumbo模式，如果函数超过65535个，那么就需要强制开启jumbo模式才可以构建成功
+        preDexLibraries true // 是否预执行dex Libraries库工程，开启后会大大提高增量构建的速度，但是会影响clean构建的速度，默认开启。如果使用dx的--multi-dex选项生成多个dex，需要设置为false
+        threadCount 2 // 执行dx使用的线程数量
+    }
 }
 
 android.applicationVariants.all { variant ->
