@@ -19,14 +19,28 @@ android {
         targetSdkVersion rootProject.android.targetSdkVersion
         versionCode rootProject.android.versionCode
         versionName rootProject.android.versionName
-
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        flavorDimensions "default"
     }
 
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    productFlavors {
+        car {
+            // 这里可以添加car的打包配置
+        }
+
+        phone {
+            // 这里可以添加phone的打包配置
+        }
+
+        pad {
+            // 这里可以添加pad的打包配置
         }
     }
 

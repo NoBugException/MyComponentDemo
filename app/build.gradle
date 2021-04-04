@@ -10,8 +10,9 @@ android {
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
-
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        // 必须要保证所有的flavor都属于同一个维度
+        flavorDimensions "default"
     }
 
     buildTypes {
@@ -21,12 +22,25 @@ android {
         }
     }
 
+    productFlavors {
+        car {
+            // 这里可以添加car的打包配置
+        }
+
+        phone {
+            // 这里可以添加phone的打包配置
+        }
+
+        pad {
+            // 这里可以添加pad的打包配置
+        }
+    }
 }
 
 android.applicationVariants.all { variant ->
     variant.outputs.all {
         // 指定apk的输出路径
-        variant.getPackageApplication().outputDirectory = new File("./apk")
+        //variant.getPackageApplication().outputDirectory = new File("./apk")
         // 指定apk输出的名称
         outputFileName = "${variant.name}_v${variant.versionName}.apk"
     }
