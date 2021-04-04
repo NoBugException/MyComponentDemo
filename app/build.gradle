@@ -20,6 +20,16 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+}
+
+android.applicationVariants.all { variant ->
+    variant.outputs.all {
+        // 指定apk的输出路径
+        variant.getPackageApplication().outputDirectory = new File("./apk")
+        // 指定apk输出的名称
+        outputFileName = "${variant.name}_v${variant.versionName}.apk"
+    }
 }
 
 dependencies {
